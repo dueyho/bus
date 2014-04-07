@@ -7,6 +7,11 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :bus %>
+    <%= f.text_field :bus %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :line %>
     <%= collection_select(:stop, :line_id, Line.all, :id, :color, {:prompt => true}) %>
   </div>

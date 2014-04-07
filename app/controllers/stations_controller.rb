@@ -9,6 +9,7 @@ class StationsController < ApplicationController
 
   def show
     @station = Station.find(params[:id])
+    @stops = Stop.where(station_id: @station.id)
   end
 
   def create

@@ -1,0 +1,7 @@
+<h1> All Buses for  <%= @station.name %> station</h1>
+
+<ul>
+  <% @stops.each do |stop| %>
+  <li><%= stop.bus %></li>
+  <% end %>
+</ul>

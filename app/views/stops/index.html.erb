@@ -4,7 +4,7 @@
 
 <ul>
 <% @stops.all.each do |stop| %>
-  <li><a href="/stops/<%= stop.id %>" >Line: <%= stop.line.color %>  Station: <%= stop.station.name %>  Time: <%= stop.time %></a></li>
+  <li><a href="/stops/<%= stop.id %>" > Bus No. <%= stop.bus %> - Time: <%= stop.time %> - Line: <%= stop.line.color %> - Station: <%= stop.station.name %></a></li>
 <% end %>
 </ul>
 <%= link_to "New stop", new_stop_path, :class=> "btn btn-default" %><br>
@@ -13,5 +13,12 @@
 <ul>
 <% Line.all.each do |line| %>
   <li><a href="/lines/<%= line.id %>" >Line: <%= line.color %></a></li>
+<% end %>
+</ul>
+
+<h3>Search for buses by station: </h3>
+<ul>
+<% Station.all.each do |station| %>
+  <li><a href="/stations/<%= station.id %>" > Station: <%= station.name %></a></li>
 <% end %>
 </ul>
