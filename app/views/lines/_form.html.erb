@@ -1,0 +1,9 @@
+<%= render('layouts/errors', :object => @line) %>
+
+<%= form_for(@line) do |f| %>
+  <div class="form-group">
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </div>
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>

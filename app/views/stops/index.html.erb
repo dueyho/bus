@@ -1,0 +1,17 @@
+<% content_for(:title, "Bus Stops") %>
+
+<h1> Bus Stops </h1>
+
+<ul>
+<% @stops.all.each do |stop| %>
+  <li><a href="/stops/<%= stop.id %>" >Line: <%= stop.line.color %>  Station: <%= stop.station.name %>  Time: <%= stop.time %></a></li>
+<% end %>
+</ul>
+<%= link_to "New stop", new_stop_path, :class=> "btn btn-default" %><br>
+
+<h3>Search for stations by line: </h3>
+<ul>
+<% Line.all.each do |line| %>
+  <li><a href="/lines/<%= line.id %>" >Line: <%= line.color %></a></li>
+<% end %>
+</ul>
