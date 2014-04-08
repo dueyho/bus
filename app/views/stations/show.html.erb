@@ -1,3 +1,4 @@
+<div class="container">
 <h1> All Buses for  <%= @station.name %> station</h1>
 
 <ul>
@@ -5,3 +6,5 @@
   <li><%= stop.bus %></li>
   <% end %>
 </ul>
+<%= link_to "Go Back", stops_path, :class=> "btn btn-default" %>
+<div>

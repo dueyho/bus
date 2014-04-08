@@ -1,6 +1,9 @@
+<div class="container">
 <h1>All Stations for the <%= @line.color %> line!</h1>
 <ul>
   <% @stops.each do |stop| %>
   <li><%= stop.station.name %></li>
   <% end %>
 </ul>
+<%= link_to "Go Back", stops_path, :class=> "btn btn-default" %>
+</div>

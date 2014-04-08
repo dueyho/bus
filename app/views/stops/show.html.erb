@@ -1,12 +1,14 @@
+<div class="container">
 <h1><u>Viewing: Stop ID <%= @stop.id %></u></h1>
 <p>Bus No. <%= @stop.bus %></p>
 <p>Time: <%= @stop.time %></p>
 <p>Line : <%= @stop.line.color %></p>
 <p>Station: <%= @stop.station.name %></p>
 
-<%= link_to "Edit stop", edit_stop_path(@stop), :class=> "btn btn-default" %><br>
+<%= link_to "Edit stop", edit_stop_path(@stop), :class=> "btn btn-default" %><p>
 <p><%= link_to "Delete", stop_path(@stop),
                          :confirm => "You sure?",
                          :method => "delete",
                          :class => "btn btn-danger" %></p>
 <%= link_to "Go Back", stops_path, :class=> "btn btn-default" %>
+</div>
